@@ -17,7 +17,7 @@ def main():
             speaker = record["speaker"]
             statement = record["statement"]
             is_first = True
-            
+
             for statement_line in statement:
                 #print(f"(...) {json.dumps(statement_line, ensure_ascii=False)}")
 
@@ -31,7 +31,7 @@ def main():
                 if is_first:
                     #print("(^q^) 発言の１行目：［{statement_line}］")
                     is_first = False
-                    f_out.write(f"　　　　　　　　　 {speaker}　｜　{statement_line}\n")
+                    f_out.write(f"　　　　　　　　　{speaker}　｜　{statement_line}\n")
                 else:
                     f_out.write(f"　　　　　　　　　　　　｜　{statement_line}\n")
 
