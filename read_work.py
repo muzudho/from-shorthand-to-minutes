@@ -12,7 +12,7 @@ def main():
 
             statement = record["statement"]
             for statement_line in statement:
-                print(f"(...) {json.dumps(statement_line)}")
+                print(f"(...) {json.dumps(statement_line, ensure_ascii=False)}")
 
 if __name__ == "__main__":
     main()
