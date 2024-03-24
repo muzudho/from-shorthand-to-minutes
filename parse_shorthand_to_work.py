@@ -1,4 +1,4 @@
-# python shorthand_to_work.py
+# python parse_shorthand_to_work.py
 import json
 import re
 
@@ -14,7 +14,7 @@ def main():
             # 末尾の改行は削除
             # めんどくさいんでタブはざっくりスペース 1つに変換
             line = line.rstrip().replace("\t", ' ')
-            print(f"（＾～＾）　タブをスペースへ変換　［{line}］")
+            print(f"（＾～＾）　末尾の改行を削除、タブはスペース１つへ変換　［{line}］")
 
             # 連続したスペースがあれば１つにまとめたい
             line = re.sub(r"\s+", ' ', line)
