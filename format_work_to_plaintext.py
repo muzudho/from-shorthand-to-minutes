@@ -34,7 +34,7 @@ def main():
 
             # 発言者が要約のとき、そのまま出す
             elif speaker == "要約":
-                f_out.write(f"\n■{speaker}　　{statement}\n")
+                f_out.write(f"\n　■{speaker}　　{statement}\n")
                 is_summary = True
 
             # 要約が続くとき、そのまま出す
