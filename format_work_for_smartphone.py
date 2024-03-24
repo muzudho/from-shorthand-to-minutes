@@ -1,4 +1,4 @@
-# python format_work_to_plaintext.py
+# python format_work_for_smartphone.py
 import json
 
 def main():
