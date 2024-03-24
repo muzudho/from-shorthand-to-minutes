@@ -1,4 +1,4 @@
-# python parse_shorthand_to_work.py
+# python parse_shorthand_to_work_obsoleted.py
 import json
 import re
 
@@ -37,8 +37,12 @@ def main():
 
                 else:
                     #print(f"（＾～＾）残り　　　［{pair[1]}］")
-                    # 前後のスペースと改行を取り除く
-                    statement = pair[1].strip()
+                    # 改行は \r\n と仮定
+                    statement = pair[1].strip().split("\r\n")
+
+                    for statement_line in statement:
+                        #print(f"(SL ) ［{statement_line}］")
+                        pass
 
                     minute.append({"speaker":speaker, "statement":statement})
 
@@ -47,8 +51,7 @@ def main():
                 line = line.strip()
                 #print(f"（...）それ以外　［{line}］")
                 statement = line.split("\r\n")
-                for statement_line in statement:
-                    minute.append({"speaker":"", "statement":statement_line})
+                minute.append({"speaker":"", "statement":statement})
 
 
     with open("work.json", "w", encoding="UTF-8") as f_out:
