@@ -60,7 +60,7 @@ def main():
 
                 print(f"（＾～＾）発言　　　［{statement}］")
 
-                minute.append({"speaker":"", "statement":statement})
+                minute.append({"speaker":speaker, "statement":statement})
 
 
     with open("work.json", "w", encoding="UTF-8") as f_out:
